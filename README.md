@@ -15,3 +15,12 @@ Use ← / → or the Previous / Next buttons to step through each demo.
 
 > Serve it over http(s) (GitHub Pages or `python3 -m http.server`). Opened straight from disk
 > (`file://`), the browser blocks the hub from forwarding Next/Prev into the interactive demos 2–4.
+
+## Pampers Demo Hub
+
+`pampers/index.html` — FreeStand × Pampers India, two tabs:
+
+1. Claim to loyalty — pampers.in web form, WhatsApp OTP, size allocation, qualification checks, then delivery, feedback and Pampers Club on WhatsApp
+2. Offline + voice AI — in-store stand, size-matched hand-over, voice AI verification, loyalty or audit flag
+
+Live at `/pampers/` under this site's GitHub Pages URL.
