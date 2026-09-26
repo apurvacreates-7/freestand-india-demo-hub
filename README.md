@@ -27,10 +27,9 @@ Live at `/pampers/` under this site's GitHub Pages URL.
 
 ## Mondelēz: one platform, end to end
 
-`mondelez/index.html` — FreeStand × Mondelēz India story in the Freestand Studio UI. Pick any of 12 campaign
-mechanics (each live in 1–2 days), run its demo, see its analytics in Studio, then follow the data:
-Meena’s unified profile → enrichment with Paytm, Google Pay, Swiggy, Blinkit and Zepto via the KOSA clean
-room → cohorts → insights → push to Mondelēz Lytics and activation with match rates → pricing.
-Use ← / → or the story bar.
+`mondelez/index.html` — one Freestand Studio workspace for Mondelēz India. Campaigns lists all 12 mechanics
+(each live in 1–2 days); a campaign opens on its consumer journey, then its analytics and setup. The same
+workspace holds the consumer side: Meena’s unified profile, enrichment with Paytm, Google Pay, Swiggy, Blinkit
+and Zepto via the KOSA clean room, cohorts, insights, Mondelēz Lytics activation with match rates, and pricing.
 
 Live at `/mondelez/` under this site's GitHub Pages URL. Built output only; the editable React source is kept separately.
