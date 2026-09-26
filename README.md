@@ -27,15 +27,10 @@ Live at `/pampers/` under this site's GitHub Pages URL.
 
 ## Mondelēz: one platform, end to end
 
-`mondelez/index.html` — FreeStand × Mondelēz India story in the Freestand Studio UI. One guided flow
-(← / → or the story bar) that combines this hub, the Mondelēz use-case demos and the CDP prototype:
-
-1. Today vs proposed consumer-data flow
-2. Every campaign mechanic on one platform, live in 1–2 days (12 mechanics with their demos)
-3. Meena’s unified profile built from those campaigns
-4. Enrichment with Paytm, Google Pay, Swiggy, Blinkit and Zepto via the KOSA clean room
-5. Cohorts · 6. Insights (LTV, inferred traits, NPD, campaign ideas)
-7. Push to Mondelēz Lytics and activation (Meta, Google, Amazon, CPAS, OTT) with match rates
-8. Pricing: Launch / Portfolio / Scale
+`mondelez/index.html` — FreeStand × Mondelēz India story in the Freestand Studio UI. Pick any of 12 campaign
+mechanics (each live in 1–2 days), run its demo, see its analytics in Studio, then follow the data:
+Meena’s unified profile → enrichment with Paytm, Google Pay, Swiggy, Blinkit and Zepto via the KOSA clean
+room → cohorts → insights → push to Mondelēz Lytics and activation with match rates → pricing.
+Use ← / → or the story bar.
 
 Live at `/mondelez/` under this site's GitHub Pages URL. Built output only; the editable React source is kept separately.
