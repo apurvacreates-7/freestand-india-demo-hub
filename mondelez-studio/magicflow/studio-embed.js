@@ -31,7 +31,7 @@
   if (typeof NODE_TYPES !== "undefined") {
     NODE_TYPES.text.label = ch.msg;
     NODE_TYPES.text.icon = ch.icon;
-    NODE_TYPES.text.desc = `Send a one-way ${ch.label} message (NOT for questions — use question type instead)`;
+    NODE_TYPES.text.desc = `Send a one-way ${ch.label} message (not for questions, use the question type instead)`;
     ch.drop.forEach((t) => delete NODE_TYPES[t]);
   }
 
