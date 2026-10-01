@@ -1,7 +1,7 @@
 /* node type registry, palette categories, demo flows · mirrors constants/node-categories.ts and utils/node-presentation.ts */
 const NODE_TYPES={
   start:{label:"Start",icon:"play",color:"#22c55e",w:300},
-  text:{label:"WhatsApp Message",icon:"message-circle",color:"var(--platform-accent)",w:280,cat:"Interaction",desc:"Send a one-way message (NOT for questions — use question type instead)"},
+  text:{label:"WhatsApp Message",icon:"message-circle",color:"var(--platform-accent)",w:280,cat:"Interaction",desc:"Send a one-way message (not for questions, use the question type instead)"},
   question:{label:"Question",icon:"circle-help",color:"var(--platform-accent)",w:280,cat:"Interaction",desc:"Ask users a question and wait for their text reply"},
   quickReply:{label:"Quick Reply",icon:"list-checks",color:"var(--platform-accent)",w:300,cat:"Interaction",desc:"Question with button options"},
   list:{label:"List",icon:"list",color:"var(--platform-accent)",w:320,cat:"Interaction",desc:"Interactive list menu"},
