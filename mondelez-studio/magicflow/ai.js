@@ -18,13 +18,13 @@ const AI={
   async stream(el,text){ const target=document.createElement("div"); el.appendChild(target); let out=""; for(const ch of text){ if(this.stop)break; out+=ch; target.innerHTML=this.md(out); await this.sleep(ch===" "?9:14); const b=this.el.querySelector("#ai-body"); b.scrollTop=b.scrollHeight; } target.innerHTML=this.md(out); },
   md(s){ return s.split(/\n\n+/).map(p=>{ if(/^- /m.test(p))return "<ul>"+p.split("\n").filter(Boolean).map(l=>"<li>"+this.inline(l.replace(/^- /,""))+"</li>").join("")+"</ul>"; return "<p>"+this.inline(p).replace(/\n/g,"<br>")+"</p>"; }).join(""); },
   inline(s){ return esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/`(.+?)`/g,"<code>$1</code>"); },
-  async tool(el,label,ms){ const t=document.createElement("div"); t.className="tool"; t.innerHTML=`<span class="spin"></span><span class="shim">${label}</span>`; el.appendChild(t); await this.sleep(ms||900); return (done)=>{ t.innerHTML=`<span class="ok"><i data-lucide="check"></i></span><span>${done}</span>`; lucide.createIcons({nameAttr:"data-lucide"}); }; },
+  async tool(el,label,ms){ const t=document.createElement("div"); t.className="tool"; t.innerHTML=`<fs-loader class="spin"></fs-loader><span class="shim">${label}</span>`; el.appendChild(t); await this.sleep(ms||900); return (done)=>{ t.innerHTML=`<span class="ok"><i data-lucide="check"></i></span><span>${done}</span>`; lucide.createIcons({nameAttr:"data-lucide"}); }; },
   tasks(el,rows){ const t=document.createElement("div"); t.className="tasks"; t.innerHTML=rows.map(r=>`<div class="${r[0]}">${r[0]==="add"?"+":r[0]==="rem"?"−":r[0]==="upd"?"~":"↳"} ${esc(r[1])}</div>`).join(""); el.appendChild(t); },
   lastNode(){ const ends=Canvas.nodes.filter(n=>!Canvas.edges.some(e=>e.source===n.id)&&n.type!=="transfer"&&n.type!=="flowComplete"); const s=Canvas.sel&&Canvas.node(Canvas.sel); return s&&s.type!=="flowComplete"?s:(ends[0]||Canvas.nodes[Canvas.nodes.length-1]); },
   place(after,dy){ return {x:after.x+380,y:after.y+(dy||0)}; },
   wire(a,b,h){ Canvas.edges.push({id:uid(),source:a.id,target:b.id,sourceHandle:h||null}); },
   async send(text){ text=(text||"").trim(); if(!text||this.busy)return; this.busy=true; this.stop=false; this.render(); this.push("user",esc(text));
-    const ai=this.push("ai",""); const think=document.createElement("div"); think.className="tool"; think.innerHTML='<span class="shim">Thinking…</span>'; ai.appendChild(think); await this.sleep(900); think.remove();
+    const ai=this.push("ai",""); const think=document.createElement("div"); think.className="tool"; think.innerHTML='<fs-loader class="spin"></fs-loader><span class="shim">Thinking…</span>'; ai.appendChild(think); await this.sleep(900); think.remove();
     const q=text.toLowerCase(); const before=Canvas.snapshot(); const rows=[];
     try{
     if(/review|issues|improve this flow|audit/.test(q)&&!/copy on the/.test(q)){
